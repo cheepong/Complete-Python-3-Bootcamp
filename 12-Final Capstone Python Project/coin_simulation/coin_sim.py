@@ -1,4 +1,9 @@
 import random
+import numpy as np
+import pandas as pd
+import matplotlib
+
+%matplotlib
 
 def get_input():
     while True:
@@ -36,4 +41,18 @@ def get_input():
 
     return prob_head, no_of_flips, no_of_trials
 
+def simu(prob_head, no_of_flips, no_of_trials):
+    ans = []
+    for i in range(0, no_of_trials-1):
+        i = []
+
+        for j in range(0, no_of_flips-1):
+            i.append(random.randint(0,1))
+
+        ans.append(i)
+    return ans
+
 prob_head, no_of_flips, no_of_trials = get_input()
+ans_matrix = simu(prob_head, no_of_flips, no_of_trials)
+
+print(ans_matrix)
