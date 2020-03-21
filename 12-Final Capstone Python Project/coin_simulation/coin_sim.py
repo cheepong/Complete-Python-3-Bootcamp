@@ -55,6 +55,11 @@ def simu(prob_head, no_of_flips, no_of_trials):
     return ans
 
 def coin_sim():
+    """
+    Generate the chart to show how the proportion of heads will converge to the theoritical probabilityself.
+    You will be prompted for inputs.
+    Output chart and simulated data.
+    """
     prob_head, no_of_flips, no_of_trials = get_input()
     ans_matrix = simu(prob_head, no_of_flips, no_of_trials)
 
